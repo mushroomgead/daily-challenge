@@ -14,6 +14,7 @@ function alphabeticSubsequence(s) {
 
 console.log(alphabeticSubsequence('effg')) // false
 console.log(alphabeticSubsequence('cdce')) // false
+console.log(alphabeticSubsequence('zab')) // false
 
 console.log(alphabeticSubsequence('ace')) // true
 console.log(alphabeticSubsequence('bxz')) // true

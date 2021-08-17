@@ -1,6 +1,7 @@
 // refer: https://www.udemy.com/course/100-algorithms-challenge/learn/lecture/10510864#overview
 
 function areSimilar(a, b) {
+    return a.sort() === b.sort()
 }
 
 console.log(areSimilar([1, 2, 3], [1, 2, 3])) // true

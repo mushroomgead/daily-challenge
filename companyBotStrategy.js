@@ -1,7 +1,7 @@
 // refer: https://www.udemy.com/course/100-algorithms-challenge/learn/lecture/10518914#overview
 function companyBotStrategy(trainingData) {
     let result = 0
-    let total = 1
+    let total = 0
 
     for (let i = 0; i < trainingData.length; i++) {
         if (trainingData[i][1] >= 1) {
@@ -9,7 +9,7 @@ function companyBotStrategy(trainingData) {
             total++
         }
     }
-    return result / total
+    return result / total || 0
 }
 
 const trainingData = [[3, 1], [6, 1], [4, 1], [5, 1]] // 4.5

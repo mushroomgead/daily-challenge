@@ -1,0 +1,119 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* version1 */
+/* a {
+    text-decoration: none;
+    color: #272727;
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 5px solid #272727;
+    position: relative;
+    overflow: hidden;
+}
+a:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff200;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 1s;
+}
+a:hover::before {
+    transform: rotate(0deg);
+} */
+/* version2 */
+a {
+    text-decoration: none;
+    color: #272727;
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 5px solid #272727;
+    position: relative;
+    overflow: hidden;
+}
+a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6416a5;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+}
+a:after {
+    content: "YEAH!";
+    position: absolute;
+    top: 0;
+    text-align: center; 
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transform: translate(-50%, -100%);
+    transition: transform 0.5s;
+}
+a:hover {
+    color: #fff;
+    transition: ease-out 1s;
+}
+a:hover::before {
+    transform: translateY(0);
+}
+a:hover::after {
+    transform: translate(-50%, 30%);
+}
+/* version3 */
+/* a {
+    text-decoration: none;
+    color: #272727;
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 5px solid #272727;
+    position: relative;
+}
+a:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #16a529;
+    transition: 1s;
+    transform: rotateX(90deg);
+    z-index: -1;
+}
+a:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #16a529;
+    transition: 1s;
+    transform: rotateY(90deg);
+    z-index: -1;
+}
+a:hover::before {
+    transform: rotateX(0deg);
+}
+a:hover::after {
+    transform: rotateY(0deg);
+}
+a:hover {
+    transition: ease-in-out 1s;
+    color: #fff;
+} */

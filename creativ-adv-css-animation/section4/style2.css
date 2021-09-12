@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* version1 */
+/* a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #b44646;
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 3px solid #b44646;
+    transition: all 0.5s;
+}
+a:hover {
+    border: 7px solid #b44646;
+    font-size: 50px;
+}  */
+
+/* version2 */
+/* a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #b44646;
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 3px solid #b44646;
+    overflow: hidden;
+}
+a::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(218, 216, 216);
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.5s;
+}
+a:hover::before {
+    transform: translateX(100%) rotate(45deg);
+} 
+a:hover {
+    background-color: rgb(233, 232, 232);
+} */
+
+/* version3 */
+a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 3px solid #ccc;
+    color: transparent;
+    overflow: hidden;
+}
+a::before {
+    content: "HOVER ME";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(218, 216, 216);
+    color: rgb(46, 46, 46);
+    transform: translate(0, 0);
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a::after {
+    content: "HOVER ME";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(97, 97, 97);
+    color: rgb(46, 46, 46);
+    transform: translate(100%, -100%);
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover::before {
+    transform: translate(-100%, 100%);
+} 
+a:hover::after {
+    transform: translate(0, 0);
+} 
+a:hover {
+}

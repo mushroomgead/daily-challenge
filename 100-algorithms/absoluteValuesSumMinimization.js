@@ -5,7 +5,9 @@ function absoluteValuesSumMinimization(a) {
   return result;
 }
 
-console.log(absoluteValuesSumMinimization([2, 4, 7]));
-console.log(absoluteValuesSumMinimization([2, 4, 7, 6]));
-console.log(absoluteValuesSumMinimization([2, 4, 7, 6, 6]));
-console.log(absoluteValuesSumMinimization([2, 4, 7, 6, 6]));
+module.exports = absoluteValuesSumMinimization;
+
+console.log(absoluteValuesSumMinimization([2, 4, 7])); // 4
+console.log(absoluteValuesSumMinimization([2, 4, 7, 6])); // 4
+console.log(absoluteValuesSumMinimization([2, 4, 7, 6, 6])); // 7
+console.log(absoluteValuesSumMinimization([2, 4, 7, 6, 6])); // 7

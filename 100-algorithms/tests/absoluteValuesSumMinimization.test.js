@@ -1,6 +1,6 @@
 const absoluteValuesSumMinimization = require('../absoluteValuesSumMinimization');
 
-describe('absoluteValuesSumMinimization', () => {
+describe('find an integer x from a such that the value of is the smallest possible', () => {
   test('should return 4', () => {
     expect(absoluteValuesSumMinimization([2, 4, 7])).toBe(4);
   });

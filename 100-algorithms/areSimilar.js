@@ -1,9 +1,14 @@
 // refer: https://www.udemy.com/course/100-algorithms-challenge/learn/lecture/10510864#overview
 
 function areSimilar(a, b) {
-    return a.sort() === b.sort()
+  const sortedA = a.sort();
+  const sortedB = b.sort();
+
+  if (sortedA.length !== sortedB.length) {
+    return false;
+  }
+  const isDifference = sortedA.find((item, index) => item !== sortedB[index]);
+  return !isDifference;
 }
 
-console.log(areSimilar([1, 2, 3], [1, 2, 3])) // true
-console.log(areSimilar([1, 2, 3], [2, 1, 3])) // true
-console.log(areSimilar([1, 2, 2], [2, 1, 1])) // false
+module.exports = areSimilar;
